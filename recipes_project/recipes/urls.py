@@ -24,4 +24,5 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(template_name='logout.html'), name='logout'),
     path('profile/', profile, name='profile'),
     path('profile/create/', create_profile, name='create_profile'),
+    path('__debug__/', include('debug_toolbar.urls')),
 ]

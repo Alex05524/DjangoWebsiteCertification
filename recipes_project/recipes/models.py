@@ -21,7 +21,7 @@ class Recipe(models.Model):
     description = models.TextField(verbose_name='Описание')
     preparation_steps = models.TextField(verbose_name='Шаги приготовления')
     preparation_time = models.PositiveIntegerField(verbose_name='Время приготовления в минутах')
-    image = models.ImageField(upload_to='recipe_images/', blank=True, null=True, verbose_name='Изображение')
+    image = models.ImageField(upload_to='recipe_images/', blank=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Автор')
     # categories = models.ManyToManyField(Category, through='RecipeCategoryRelation', related_name='recipes', verbose_name='Категории')
     
